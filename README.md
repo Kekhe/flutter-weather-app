@@ -44,3 +44,6 @@ To run the app locally, follow these steps:
 ### Run the app:
 
     flutter run
+
+# Screenshots
+![Project Screenshot](location.png)
