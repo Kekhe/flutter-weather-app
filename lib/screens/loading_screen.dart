@@ -26,7 +26,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
         child: SpinKitChasingDots(
           color: Colors.white,
           size: 100,
-
         ),
       )
     );

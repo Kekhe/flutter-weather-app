@@ -60,14 +60,17 @@ class _LocationScreenState extends State<LocationScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  TextButton(
-                    onPressed: () async {
-                      var weatherData = await weather.getLocationWeather();
-                      updateUI(weatherData);
-                    },
-                    child: Icon(
-                      Icons.near_me,
-                      size: 50.0,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0, left: 20),
+                    child: TextButton(
+                      onPressed: () async {
+                        var weatherData = await weather.getLocationWeather();
+                        updateUI(weatherData);
+                      },
+                      child: Icon(
+                        Icons.near_me,
+                        size: 50.0,
+                      ),
                     ),
                   ),
                   TextButton(
@@ -78,15 +81,18 @@ class _LocationScreenState extends State<LocationScreen> {
                         updateUI(weatherData);
                       }
                     },
-                    child: Icon(
-                      Icons.location_city,
-                      size: 50.0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20.0, right: 20),
+                      child: Icon(
+                        Icons.location_city,
+                        size: 50.0,
+                      ),
                     ),
                   ),
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
+                padding: EdgeInsets.only(left: 30.0),
                 child: Row(
                   children: <Widget>[
                     Text(
@@ -101,7 +107,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 15.0),
+                padding: EdgeInsets.only(right: 15.0, bottom: 15),
                 child: Text(
                   "${weather.getMessage(temperature??0)} in $cityName!",
                   textAlign: TextAlign.right,
