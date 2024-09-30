@@ -47,3 +47,4 @@ To run the app locally, follow these steps:
 
 # Screenshots
 ![Project Screenshot](location.png)
+![Project Screenshot](weather.png)
